@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RapidPay</name>
+    </assembly>
+    <members>
+        <member name="T:RapidPay.App.Controllers.BaseController">
+            <summary>
+            Base Controller
+            </summary>
+        </member>
+        <member name="M:RapidPay.App.Controllers.BaseController.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.String,System.String)">
+            <summary>
+            Response Wrapper
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="method"></param>
+            <param name="errorMessage"></param>
+            <param name="successMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RapidPay.App.Controllers.TokenController">
+            <summary>
+            JWT Token generator class protected by Basic Authentication
+            </summary>
+        </member>
+        <member name="M:RapidPay.App.Controllers.TokenController.#ctor(Microsoft.Extensions.Options.IOptions{RapidPay.Infrastructure.Core.Settings.OAuthSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:RapidPay.App.Controllers.TokenController.Token">
+            <summary>
+            Get JWT Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RapidPay.App.DependencyInjection.MediatorModule">
+            <summary>
+            Mediator module with Autofac
+            </summary>
+        </member>
+        <member name="M:RapidPay.App.DependencyInjection.ServiceCollectionExtensions.AddDependendcies(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add Dependencies
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:RapidPay.App.Models.ApiResponse`1">
+            <summary>
+            Api response class
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:RapidPay.App.Models.ApiResponse`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:RapidPay.App.Models.ApiResponse`1.Data">
+            <summary>
+            Data response
+            </summary>
+        </member>
+        <member name="P:RapidPay.App.Models.ApiResponse`1.Messages">
+            <summary>
+            Messages
+            </summary>
+        </member>
+        <member name="M:RapidPay.App.Models.ApiResponse`1.AddSuccessMessage(System.String)">
+            <summary>
+            Add Success Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:RapidPay.App.Models.ApiResponse`1.AddWarningMessage(System.String)">
+            <summary>
+            Add Warning Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:RapidPay.App.Models.ApiResponse`1.AddErrorMessage(System.String)">
+            <summary>
+            Add Error Message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:RapidPay.App.Models.ApiResponse`1.AddMessage(System.String,RapidPay.App.Models.MessageType)">
+            <summary>
+            Add Message
+            </summary>
+            <param name="message"></param>
+            <param name="messageType"></param>
+        </member>
+        <member name="T:RapidPay.App.Models.ResponseMessage">
+            <summary>
+            Response Message class
+            </summary>
+        </member>
+        <member name="P:RapidPay.App.Models.ResponseMessage.MessageType">
+            <summary>
+            Message Type
+            </summary>
+        </member>
+        <member name="P:RapidPay.App.Models.ResponseMessage.Message">
+            <summary>
+            Message string
+            </summary>
+        </member>
+        <member name="T:RapidPay.App.Models.MessageType">
+            <summary>
+            Enum message type
+            </summary>
+        </member>
+        <member name="F:RapidPay.App.Models.MessageType.Success">
+            <summary>
+            Success
+            </summary>
+        </member>
+        <member name="F:RapidPay.App.Models.MessageType.Warning">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="F:RapidPay.App.Models.MessageType.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="T:RapidPay.Infrastructure.Core.Common.Config">
+            <summary>
+            Config class
+            </summary>
+        </member>
+        <member name="F:RapidPay.Infrastructure.Core.Common.Config.ROUTE_PREFFIX">
+            <summary>
+            Api Route prefix
+            </summary>
+        </member>
+        <member name="T:RapidPay.Infrastructure.Core.Filters.BasicAuthorizationAttribute">
+            <summary>
+            Basic Authorization filter
+            </summary>
+        </member>
+        <member name="M:RapidPay.Infrastructure.Core.Filters.BasicAuthorizationAttribute.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:RapidPay.Infrastructure.Core.GlobalExceptionFilterAttribute">
+            <summary>
+            Custom exception filter
+            No need to do try-catch on each method
+            </summary>
+        </member>
+        <member name="M:RapidPay.Infrastructure.Core.GlobalExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Override from <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ExceptionFilterAttribute"/>.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:RapidPay.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create host
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidPay.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            Using Autofac here because ASP.NET Core DI does not support constrained open generics,
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -2,4 +2,14 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vss
+/src/RapidPay/.vs/RapidPay
+/src/RapidPay/obj
 /.vs
+/RapidPay.Data/bin/Debug/netcoreapp3.1
+/RapidPay.Data/obj
+/RapidPay.Models/bin/Debug/netcoreapp3.1
+/RapidPay.Models/obj
+/RapidPay.Service/bin/Debug/netcoreapp3.1
+/RapidPay.Service/obj
+/src/RapidPay/bin/Debug/netcoreapp3.1
